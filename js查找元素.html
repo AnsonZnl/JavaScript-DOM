@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+    <h1>js 查找元素</h1>
+    <div id="app">
+        <ol>
+            <li title="12">12</li>
+            <li title="132">132 </li>
+        </ol>
+    </div>
+    <div class="className" id="apps" title="1231321351">
+        Hello world
+    </div>
+    <script>
+       var a= document.getElementById("app");//按ID
+       console.log(typeof a);//string
+       var b=document.getElementsByTagName("li")//按 标签
+       console.log(b)//2
+       var c=document.getElementsByTagName("*").length;//按 标签
+       console.log(c)//14
+       var d=document.getElementsByClassName("className") ;//按 class
+       console.log(d);
+//获取查询属性 的名字
+       var paras=document.getElementsByTagName("li");
+       for(var i=0;i<paras.length;i++){
+           var title_text=paras[i].getAttribute("title");
+           if(title_text!=null){
+               console.log(title_text);
+           }
+       } 
+// 修改属性  修改 title 
+    var shop=document.getElementById("apps");
+    shop.setAttribute("title","a list of goods")
+
+
+//
+    </script>
+</body>
+</html>
